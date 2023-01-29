@@ -5,12 +5,16 @@
 */
 
 const {Router} = require('express');
+const { check } = require('express-validator');
+
 const { crearUsuario } = require('../controllers/auth');
 
 const router = Router();
 
 
-router.post('/new', crearUsuario)
+router.post('/new',[
+    check('usuario','El usuario es obligatorio').not().isEmpty(),
+] ,crearUsuario)
 
 
 
