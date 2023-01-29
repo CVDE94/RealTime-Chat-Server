@@ -18,3 +18,6 @@ io.on('connection', client => {
 
 
 });
+
+
+// Contraseña del admin de https://cloud.mongodb.com/ para el clouster 0 L8iJnDTTNimqWS5S
