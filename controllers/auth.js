@@ -41,6 +41,7 @@ const crearUsuario = async (req, res = response) => {
             crear_usuario,
             token
         });
+        
     } catch (error) {
         console.log(error);
         res.status(500).json({
