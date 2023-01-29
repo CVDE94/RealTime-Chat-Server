@@ -7,10 +7,15 @@ const { generarJWT } = require("../helpers/jwt");
 
 
 const renewToken = async (req, res = response) => {
+
+    const uuid = req.uuid;
+    const token = await generarJWT (uuid);
+    const usuario = await Usuario.findById(uuid);
     
     res.json({
         ok: true,
-        uuid: req.uuid
+        usuario,
+        token
     });
 }
 
